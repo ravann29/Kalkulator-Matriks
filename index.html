@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Matriks</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>KALKULATOR MATRIKS</h1>
+      <div class="input-section">
+        <div>
+          <label for="order">Pilih Ordo Matriks:</label>
+          <select id="order" onchange="updateOrder()">
+            <option value="2">2x2</option>
+            <option value="3">3x3</option>
+          </select>
+        </div>
+        <div class="matrix-container">
+          <div>
+            <h3>Matriks A</h3>
+            <div id="matrix1" class="matrix-grid"></div>
+          </div>
+          <div class="operator-container">
+            <span id="operator-sign"></span>
+            <!-- Tempat untuk menampilkan operator -->
+          </div>
+          <div>
+            <h3>Matriks B</h3>
+            <div id="matrix2" class="matrix-grid"></div>
+          </div>
+        </div>
+      </div>
+      <div class="button-container">
+        <button onclick="performOperation('add')">Penjumlahan</button>
+        <button onclick="performOperation('subtract')">Pengurangan</button>
+        <button onclick="performOperation('multiply')">Perkalian</button>
+      </div>
+      <div class="result-section">
+        <h2>Hasil:</h2>
+        <div id="result" class="matrix-grid"></div>
+      </div>
+      <div class="footer-text">By Ravan Raisiya Pratama</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
